@@ -47,7 +47,7 @@ const Footer = () => {
           <div className={`${styles.f_comp}`}>
             <div className={`${styles.comp_name}`}>
               運営
-              <a href="https://www.hirabari.com/" target="_blank" relrel="noopener noreferrer">
+              <a href="https://www.hirabari.com/" target="_blank" rel="noopener noreferrer">
                 平針スイミングスクール
               </a>
             </div>
