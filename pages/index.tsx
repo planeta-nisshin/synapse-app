@@ -393,7 +393,7 @@ const Home: NextPage = ({ calendars, classtl, opentxt, tellnum }: any) => {
                         <span className={styles.bt_txt}>体験レッスンのお申込みはこちら<span className={styles.icon}><FontAwesomeIcon icon={faCircleArrowRight} /></span></span>
                       </Link>
                     </div>
-                    {calendars[0].acf.calendar_img ? <div className={styles.calendar}><a href={calendars[0].acf.calendar_img.url} target="_blank" rel="noreferrer noopener"><FontAwesomeIcon icon={faCalendarDays} />レッスンカレンダー</a></div> : ""}
+                    {calendars[0].acf.calendar_img ? <div className={styles.calendar}><Link target="_blank" rel="noopener noreferrer" href={calendars[0].acf.calendar_img.url}><FontAwesomeIcon icon={faCalendarDays} />レッスンカレンダー</Link></div> : ""}
                   </div>
                 </div>
               </div>
@@ -577,7 +577,7 @@ const Home: NextPage = ({ calendars, classtl, opentxt, tellnum }: any) => {
                         <span className={styles.bt_txt}>体験レッスンのお申込みはこちら<span className={styles.icon}><FontAwesomeIcon icon={faCircleArrowRight} /></span></span>
                       </Link>
                     </div>
-                    {calendars[0].acf.calendar_img ? <div className={styles.calendar}><a href={calendars[0].acf.calendar_img.url} target="_blank" rel="noreferrer noopener"><FontAwesomeIcon icon={faCalendarDays} />レッスンカレンダー</a></div> : ""}
+                    {calendars[0].acf.calendar_img ? <div className={styles.calendar}><Link target="_blank" rel="noopener noreferrer" href={calendars[0].acf.calendar_img.url}><FontAwesomeIcon icon={faCalendarDays} />レッスンカレンダー</Link></div> : ""}
                   </div>
                   <div className={styles.experience_box}>
                     <div className={styles.column2}>
@@ -593,7 +593,7 @@ const Home: NextPage = ({ calendars, classtl, opentxt, tellnum }: any) => {
                         <span className={styles.bt_txt}>体験レッスンのお申込みはこちら<span className={styles.icon}><FontAwesomeIcon icon={faCircleArrowRight} /></span></span>
                       </Link>
                     </div>
-                    {calendars[0].acf.calendar_img ? <div className={styles.calendar}><a href={calendars[0].acf.calendar_img.url} target="_blank" rel="noreferrer noopener"><FontAwesomeIcon icon={faCalendarDays} />レッスンカレンダー</a></div> : ""}
+                    {calendars[0].acf.calendar_img ? <div className={styles.calendar}><Link target="_blank" rel="noopener noreferrer" href={calendars[0].acf.calendar_img.url}><FontAwesomeIcon icon={faCalendarDays} />レッスンカレンダー</Link></div> : ""}
                   </div>
                 </div>
               </div>
