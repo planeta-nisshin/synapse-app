@@ -1,0 +1,49 @@
+.side_bt_move{
+    position: absolute;
+    right: 0;
+    top: 40%;
+    z-index: 10;
+    transition: 0.6s;
+}
+.side_bt_wrap {
+    pointer-events: auto;
+    .side_bt {
+        border: 1px solid #ffffff;
+        width: 50px;
+        border-radius: 10px 0 0 10px;
+        min-height: 120px;
+        &:nth-child(n+2){
+            margin: 5px 0 0;
+        }
+        a {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 10px;
+            span {
+                display: block;
+            }
+            .icon {
+                width: 28px;
+                margin: 0 0 5px;
+            }
+            .txt_box {
+                writing-mode: vertical-rl;
+                color: #ffffff;
+                font-weight: bold;
+                .tl {
+                    font-size: 16px;
+                }
+                .sub {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    .side_bt_0 {
+        background: var(--baby-color);
+    }
+    .side_bt_1 {
+        background: var(--toddler-color);
+    }
+}

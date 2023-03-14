@@ -1,0 +1,266 @@
+.class {
+    padding: 40px 0 0;
+}
+.page_tl {
+    h2 {
+        .icon {
+            width: 36px;
+            color: var(--main-color);
+            margin: 0 auto;
+        }
+        .tl {
+            font-size: 28px;
+            color: var(--txt-color);
+        }
+    }
+}
+// クラス共通
+.class_tl {
+    padding: 30px 4%;
+    .icon {
+        width: 90px;
+        margin: 0 auto 10px;
+    }
+    .class_cons_txt {
+        background: #ffffff;
+        border-radius: 300px;
+        padding: 10px 20px;
+        font-size: 15px;
+        text-align: center;
+        display: table;
+        margin: 0 auto 10px;
+        line-height: 15px;
+    }
+    h3 {
+        font-size: 32px;
+        color: #ffffff;
+        text-align: center;
+        span {
+            font-size: 20px;
+        }
+    }
+}
+.class_lists {
+    .class_list {
+        padding: 30px 0;
+        &:nth-child(n + 2) {
+            border-top-style: dashed;
+            border-top-width: 2px;
+        }
+        .tl_box {
+            margin: 0 0 20px;
+            display: flex;
+            gap: 30px;
+            .icon {
+            }
+            .tl_txts {
+                .classname,
+                .price {
+                    font-size: 18px;
+                }
+                .classname {
+                }
+                h4 {
+                    font-size: 45px;
+                    color: var(--txt-color);
+                    line-height: 120%;
+                    margin: 0 0 10px;
+                }
+            }
+        }
+        .cons_txt {
+            text-align: center;
+            font-size: 20px;
+        }
+        .belongings {
+            margin: 30px 0 0;
+            li {
+                .belong_tl {
+                    padding: 10px 10px 0 10px;
+                    font-size: 18px;
+                    line-height: 18px;
+                    display: table;
+                    margin: 0 auto;
+                    border-radius: 5px 5px 0 0;
+                }
+                .belong_txt {
+                    padding: 10px;
+                    font-size: 18px;
+                    text-align: center;
+                    border-radius: 5px;
+                }
+                &:nth-child(n + 2) {
+                    margin: 20px 0 0;
+                }
+            }
+        }
+        .present_box {
+            margin: 20px 0 0;
+        }
+        .calendar_box {
+            margin: 20px 0;
+            .calendar_tl {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                font-size: 18px;
+                margin: 0 0 20px;
+                svg {
+                    width: 18px;
+                }
+            }
+            .calendar {
+                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+            }
+        }
+        .tel_bt {
+            a {
+                display: block;
+                .tl {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+                    font-size: 22px;
+                    font-weight: bold;
+                    svg {
+                        width: 17px;
+                    }
+                }
+                .txt {
+                    font-size: 18px;
+                    text-align: center;
+                    font-weight: normal;
+                    margin: 0 0 10px;
+                    color: var(--txt-color);
+                }
+                .open_txt {
+                    line-height: 15px;
+                    padding: 10px;
+                    text-align: center;
+                    font-size: 15px;
+                    font-weight: normal;
+                    font-family: "Noto Sans JP", sans-serif;
+                    background: #ffffce;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+}
+// ベビークラス
+.sec1 {
+    .class_cons_txt {
+        color: var(--baby-color);
+    }
+    .class_lists {
+        .class_list:nth-child(n + 2) {
+            border-top-color: var(--baby-color);
+        }
+        .tl_box {
+            .tl_txts {
+                .classname,
+                .price {
+                    color: var(--baby-color);
+                }
+            }
+        }
+        .belongings {
+            margin: 30px 0 0;
+            li {
+                .belong_tl {
+                    color: var(--baby-color);
+                    background: #fae4ef;
+                }
+                .belong_txt {
+                    background: #fae4ef;
+                }
+            }
+        }
+        .calendar_box {
+            .calendar_tl {
+                color: var(--baby-color);
+            }
+        }
+    }
+}
+// トドラークラス
+.sec2 {
+    padding: 0 0 160px;
+    position: relative;
+    .class_cons_txt {
+        color: var(--toddler-color);
+    }
+    .class_lists {
+        .class_list:nth-child(n + 2) {
+            border-top-color: var(--toddler-color);
+        }
+        .tl_box {
+            .tl_txts {
+                .classname,
+                .price {
+                    color: var(--toddler-color);
+                }
+            }
+        }
+        .belongings {
+            margin: 30px 0 0;
+            li {
+                .belong_tl {
+                    color: var(--toddler-color);
+                    background: #ffe6d5;
+                }
+                .belong_txt {
+                    background: #ffe6d5;
+                }
+            }
+        }
+        .calendar_box {
+            .calendar_tl {
+                color: var(--toddler-color);
+            }
+        }
+    }
+    .sec_sirokuma {
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        width: 100%;
+        background-image: url(../../public/index/sec2_nami2.png);
+        background-repeat: repeat-x;
+        background-position: bottom;
+        text-align: center;
+        svg {
+            width: 113px;
+        }
+    }
+}
+.sec3 {
+    .tl_box {
+        padding: 30px 4%;
+        background: #ffffce;
+        margin: 0 0 50px;
+        .icon {
+            width: 36px;
+            margin: 0 auto 10px;
+            color: var(--main-color);
+        }
+        .tl{
+            color: var(--txt-color);
+            font-size: 28px;
+            margin: 0;
+        }
+        .form_tyu{
+            text-align: center;
+            font-size: 16px;
+            margin: 0 0 30px;
+            span{
+                color: var(--baby-color);
+            }
+        }
+        .tl_txt{
+
+        }
+    }
+}

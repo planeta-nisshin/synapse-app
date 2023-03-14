@@ -1,0 +1,204 @@
+.contact_form{
+    padding: 0 0 100px;
+    border-bottom: 1px solid #707070;
+}
+.musttext {
+    font-size: 15px;
+    padding: 10px 0 0;
+    color: var(--baby-color);
+    display: block;
+}
+.input_wrap {
+    .input_box {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 0;
+        border-bottom: 1px dashed #707070;
+        &:last-child {
+            border-bottom: none;
+        }
+        .tl {
+            width: 130px;
+            font-size: 18px;
+            color: var(--txt-color);
+            .must {
+                display: block;
+                color: var(--baby-color);
+            }
+        }
+        .input {
+            width: calc(100% - 140px);
+            input[type="text"],
+            textarea {
+                font-size: 16px;
+                border: 1px solid #707070;
+            }
+            .form_input_short,
+            .form_input_long,
+            textarea {
+                width: 100%;
+            }
+            .form_input_short {
+                width: 100%;
+                height: 50px;
+            }
+        }
+    }
+    .one_column {
+        display: block;
+        .tl {
+            width: 100%;
+            margin: 0 0 10px;
+        }
+        .input {
+            width: 100%;
+            .form_input_long {
+                height: 115px;
+            }
+            textarea {
+                height: 270px;
+                resize: vertical;
+            }
+        }
+    }
+}
+.form_privacy_check {
+    margin: 10px 0 30px;
+    font-family: "Noto Sans JP", sans-serif;
+    .tl,
+    .txt {
+        font-size: 16px;
+    }
+    .tl {
+        text-align: center;
+        margin: 0 0 10px;
+        color: var(--main-color);
+    }
+    .txt {
+        color: var(--txt-color);
+        margin: 0 0 30px;
+        a {
+            color: var(--main-color);
+        }
+        .icon {
+            width: 16px;
+            display: inline-block;
+        }
+    }
+    .input_box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-size: 16px;
+        label {
+            color: var(--txt-color);
+        }
+        input[type="checkbox"] {
+            position: relative;
+            cursor: pointer;
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                left: -6px;
+                width: 20px;
+                height: 20px;
+            }
+            &::before {
+                transition: 0.3s;
+                z-index: 1;
+                box-sizing: border-box;
+                border: 3px solid rgba(0, 0, 0, 0);
+            }
+            &::after {
+                top: -4px;
+                background: #ffffff;
+                border: 2px solid #707070;
+                cursor: pointer;
+            }
+            &:checked {
+                &:before {
+                    transform: rotate(-45deg);
+                    height: 1rem;
+                    border-color: var(--main-color);
+                    border-top-style: none;
+                    border-right-style: none;
+                    left: -3px;
+                    top: 0;
+                }
+            }
+        }
+    }
+    .musttext {
+        text-align: center;
+    }
+}
+.bt_wrap {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 40px;
+    .reset_bt,
+    .kaku_bt,
+    .back_bt,
+    .sub_bt {
+        font-size: 19px;
+        border: none;
+        line-height: 19px;
+        padding: 20px;
+        color: #ffffff;
+        font-weight: bold;
+        border-radius: 10px;
+        letter-spacing: 0.1em;
+        &:disabled {
+            opacity: 0.4;
+        }
+    }
+    .back_bt,
+    .reset_bt {
+        background: #707070;
+    }
+    .kaku_bt,
+    .sub_bt {
+        min-width: 170px;
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#a7f8ff+0,00b9ef+100 */
+        background: #a7f8ff; /* Old browsers */
+        background: -moz-linear-gradient(top, #a7f8ff 0%, #00b9ef 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #a7f8ff 0%, #00b9ef 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(
+            to bottom,
+            #a7f8ff 0%,
+            #00b9ef 100%
+        ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a7f8ff', endColorstr='#00b9ef',GradientType=0 ); /* IE6-9 */
+    }
+    .formcheck {
+        position: relative;
+        .formchecksub {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+    }
+}
+.checknow {
+    input[type="text"],
+    input[type="checkbox"],
+    textarea,
+    label {
+        pointer-events: none;
+    }
+    input[type="text"],
+    textarea {
+        border: none!important;
+    }
+}
+.sub_txt{
+}

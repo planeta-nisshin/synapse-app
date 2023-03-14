@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="45.716" height="56.396" viewBox="0 0 45.716 56.396">
+  <g id="グループ_593" data-name="グループ 593" transform="translate(-2131.077 -1040.171) rotate(-20)">
+    <g id="_22_Flag_location_map_Destination_marker" data-name="22, Flag, location, map, Destination, marker" transform="translate(1645.902 1719.124)">
+      <g id="グループ_592" data-name="グループ 592" transform="translate(0 0)">
+        <path id="パス_1511" data-name="パス 1511" d="M1689.732,1738.537l-10.7,11,10.7,10.994H1655.78v-21.991Z" transform="translate(-1654.707 -1737.464)" fill="#ea6da4"/>
+        <path id="パス_1512" data-name="パス 1512" d="M1651.531,1847.05v-24.624a1.073,1.073,0,0,1,1.073-1.073c.593,0,1.073.48,2.083,1.073v24.624Z" transform="translate(-1651.531 -1800.172)" fill="#333"/>
+        <path id="パス_1513" data-name="パス 1513" d="M1686.43,1758.425h-33.7a1.141,1.141,0,0,1-1.2-1.073v-21.991a1.141,1.141,0,0,1,1.2-1.073h33.7a1.214,1.214,0,0,1,1.09.627.985.985,0,0,1-.183,1.148l-9.945,10.295,9.944,10.292a.985.985,0,0,1,.183,1.148A1.214,1.214,0,0,1,1686.43,1758.425Zm-31.373-2.146h28.751l-8.907-9.219a.989.989,0,0,1,0-1.4l8.908-9.222h-28.752Z" transform="translate(-1651.531 -1734.288)" fill="#333"/>
+      </g>
+    </g>
+    <circle id="楕円形_71" data-name="楕円形 71" cx="3.536" cy="3.536" r="3.536" transform="translate(1644 1714)" fill="#333"/>
+  </g>
+</svg>

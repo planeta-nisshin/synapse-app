@@ -1,0 +1,784 @@
+/*****************************************
+ 共通
+****************************************/
+.sec {
+}
+.sec_sirokuma {
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 170px;
+    background-repeat: repeat-x;
+    background-position: bottom;
+    svg {
+        width: 200px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0 auto;
+    }
+}
+.index_tl {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 0 22px;
+    line-height: 180%;
+}
+.blue {
+    color: var(--main-color);
+    font-weight: 600;
+}
+/*****************************************
+ sec1
+****************************************/
+.sec1 {
+    .main_concept_box {
+        padding: 0 0 170px;
+        position: relative;
+        .main_concept_txt_wrap {
+            padding: 60px 4%;
+            background-repeat: no-repeat;
+            background-image: url(../../public/index/sec1_bg_1.png), url(../../public/index/sec1_bg_2.png);
+            background-position: right 0 top 0, left 0 bottom 0;
+            .main_concept_txt {
+                font-weight: bold;
+                text-align: center;
+                font-size: 24px;
+                line-height: 180%;
+                color: var(--txt-color);
+                .main_concept_big_txt {
+                    font-size: 36px;
+                }
+                .main_concept_blue_txt {
+                    color: var(--main-color);
+                }
+            }
+            .main_concept_txt_top {
+                .main_concept_bgc_txt {
+                    padding: 5px;
+                    background: var(--subbg-color);
+                    color: var(--main-color);
+                    border-radius: 10px;
+                    line-height: 24px;
+                }
+            }
+            .img {
+                max-width: 297px;
+                margin: 20px auto;
+            }
+            .main_concept_txt_bottombotomu {
+                .main_concept_big_txt {
+                    .main_concept_blue_txt {
+                    }
+                }
+            }
+        }
+        .sec_img {
+            img {
+            }
+        }
+        .sec_sirokuma {
+            background-image: url(../../public/index/sec2_nami1.png);
+        }
+    }
+    .sec_box {
+        position: relative;
+        padding: 50px 0 120px;
+    }
+    .sec1_box1 {
+        background: #30c3f0;
+        .index_h2 {
+            color: #ffffff;
+            font-size: 30px;
+        }
+        .index_h2_fukidasi {
+            position: relative;
+            &::after,
+            &::before {
+                position: absolute;
+                bottom: 45px;
+                width: 120px;
+                height: 2px;
+                content: "";
+                background: #ffffff;
+            }
+            &::after {
+                transform: rotate(50deg);
+                left: 0;
+            }
+            &::before {
+                transform: rotate(-50deg);
+                right: 0;
+            }
+        }
+        .sec1_box1_tlsub {
+            font-size: 20px;
+            color: var(--pick-color);
+            font-weight: bold;
+            text-align: center;
+            margin: 0 0 20px;
+        }
+        .sec_box1_txt {
+            color: #ffffff;
+            font-size: 24px;
+        }
+        .img {
+            margin: 0 0 22px;
+        }
+        .sec_sirokuma {
+            background-image: url(../../public/index/sec2_nami2.png);
+        }
+    }
+    .sec1_box2 {
+        background: #ffffce;
+        padding: 50px 0;
+        h2 {
+            text-align: center;
+            font-size: 20px;
+            color: var(--main-color);
+            margin: 0 0 30px;
+            .ribbon {
+                display: block;
+                font-size: 24px;
+                color: var(--pick-color);
+                line-height: 24px;
+                padding: 10px 0;
+                position: relative;
+                background: var(--main-color);
+                margin: 10px 0 0;
+                &:before,
+                &:after {
+                    position: absolute;
+                    content: "";
+                    width: 0px;
+                    height: 0px;
+                    z-index: 1;
+                }
+                &:before {
+                    /*左端の山形*/
+                    top: 0;
+                    left: 0;
+                    border-width: 22px 0px 22px 15px;
+                    border-color: transparent transparent transparent #ffffce;
+                    border-style: solid;
+                }
+                &:after {
+                    /*右端の山形*/
+                    top: 0;
+                    right: 0;
+                    border-width: 22px 15px 22px 0px;
+                    border-color: transparent #ffffce transparent transparent;
+                    border-style: solid;
+                }
+            }
+        }
+        .img {
+            margin: 20px 0;
+        }
+    }
+    .sec1_box3 {
+        background-color: var(--main-color);
+        padding: 50px 0 60px;
+        position: relative;
+        &::after {
+            background-repeat: repeat-x;
+            background-position: bottom;
+            background-image: url(../../public/index/sec2_nami3.png);
+            height: 21px;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            bottom: -1px;
+            content: "";
+        }
+        .sec1_box3_txt {
+            color: #ffffff;
+            font-size: 32px;
+        }
+    }
+}
+/*****************************************
+ sec2
+****************************************/
+.sec2 {
+    .class_cons_txt {
+        background: #ffffff;
+        padding: 10px;
+        width: 150px;
+        font-size: 15px;
+        line-height: 15px;
+        border-radius: 300px;
+        margin: 0 auto 10px;
+    }
+    .b_t_anchor_wrap {
+        padding: 60px 0 0;
+        .b_t_anchor_sirokuma {
+            text-align: center;
+            .sirokuma_txt {
+                font-size: 20px;
+                color: var(--txt-color);
+            }
+            svg {
+                width: 200px;
+            }
+        }
+        .b_t_anchor {
+            display: flex;
+            .b_t_anchor_li {
+                width: 50%;
+                a {
+                    display: block;
+                    padding: 20px;
+                    text-align: center;
+                    color: #ffffff;
+                    font-weight: bold;
+                    .tl {
+                        font-size: 24px;
+                    }
+                    .age {
+                        font-size: 15px;
+                        margin: 0 0 10px;
+                    }
+                    svg {
+                        width: 60px;
+                    }
+                }
+                &:nth-child(1) {
+                    .class_cons_txt {
+                        color: var(--baby-color);
+                    }
+                }
+                &:nth-child(2) {
+                    .class_cons_txt {
+                        color: var(--toddler-color);
+                    }
+                }
+            }
+        }
+    }
+    /******************
+    クラス共通
+    ******************/
+    .class_wrap {
+        .class_tl_box {
+            padding: 60px 0 20px;
+            text-align: center;
+            .icon {
+                margin: 0 auto;
+                width: 90px;
+            }
+            h2 {
+                font-size: 32px;
+                color: var(--txt-color);
+                margin: 0 0 20px;
+                span {
+                    font-size: 20px;
+                }
+            }
+            .class_tl_txt {
+                font-size: 24px;
+            }
+        }
+        // クラスメインビジュアル
+        .class_mv {
+            .class_mv_img {
+                position: relative;
+                &::after {
+                    content: "";
+                    background-repeat: repeat-x;
+                    position: absolute;
+                    left: 0;
+                    bottom: -1px;
+                    height: 21px;
+                    width: 100%;
+                }
+            }
+            .class_mv_tl {
+                text-align: center;
+                color: #ffffff;
+                padding: 10px 0 20px;
+                position: relative;
+                &::after {
+                    position: absolute;
+                    content: "";
+                    height: 27px;
+                    width: 27px;
+                    transform: rotate(45deg);
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                    bottom: -10px;
+                }
+                h3 {
+                    font-size: 24px;
+                    margin: 0 0 10px;
+                }
+                .class_mv_txt {
+                    font-size: 18px;
+                    margin: 0 0 10px;
+                    .class_cons_txt {
+                        width: 213px;
+                    }
+                }
+            }
+        }
+
+        .class_concept {
+            padding: 50px 0 0;
+            .class_concept_img {
+                margin: 0 auto 40px;
+            }
+            .class_concept_boxs {
+                .class_concept_box {
+                    &:nth-child(n + 2) {
+                        margin: 30px 0 0;
+                    }
+                    .class_concept_box_tl {
+                        margin: 0 0 20px;
+                        .icon {
+                            width: 110px;
+                            margin: 0 auto 10px;
+                        }
+                        h4 {
+                            font-size: 24px;
+                            text-align: center;
+                            color: var(--txt-color);
+                        }
+                    }
+                }
+                .class_concept_box_cont {
+                    .class_concept_box_cont_lis {
+                        padding: 20px 15px;
+                        border-radius: 0 0 10px 10px;
+                        .class_concept_box_cont_li {
+                            &:nth-child(n + 2) {
+                                margin: 20px 0 0;
+                            }
+                            .tl {
+                                font-size: 20px;
+                                text-align: center;
+                                font-weight: bold;
+                                margin: 0 0 10px;
+                                span {
+                                    display: block;
+                                    padding: 0 0 10px;
+                                    margin: 0 0 10px;
+                                }
+                            }
+                            .img {
+                                margin: 10px 0 0;
+                            }
+                            .move_lis {
+                                margin: 20px 0 0;
+                                li {
+                                    position: relative;
+                                    padding: 15px 0 0;
+                                    &:nth-child(n + 2) {
+                                        margin: 20px 0 0;
+                                    }
+                                    .tl {
+                                        position: absolute;
+                                        left: 0;
+                                        right: 0;
+                                        top: 0;
+                                        margin: 0 auto;
+                                        background: #ffffff;
+                                        border-radius: 5px;
+                                        display: table;
+                                        padding: 5px 10px;
+                                        font-weight: normal;
+                                        font-size: 16px;
+                                    }
+                                    .txt {
+                                        border: 2px solid #ffffff;
+                                        text-align: center;
+                                        padding: 20px 10px 10px;
+                                        border-radius: 5px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        // 体験レッスン
+        .experience {
+            padding: 50px 0 60px;
+            background: var(--main-color);
+            position: relative;
+            &::after {
+                background-repeat: repeat-x;
+                background-position: bottom;
+                background-image: url(../../public/index/sec2_nami3.png);
+                height: 21px;
+                width: 100%;
+                position: absolute;
+                left: 0;
+                bottom: -1px;
+                content: "";
+            }
+            h3 {
+                font-size: 32px;
+                color: var(--pick-color);
+            }
+            .experience_boxs {
+                .experience_box {
+                    padding: 0 0 30px;
+                    &:nth-child(n + 2) {
+                        padding: 30px 0;
+                        border-top: 2px dashed #ffffff;
+                    }
+                    .column1,
+                    .column2 {
+                        margin: 0 0 30px;
+                        .lesson_icon {
+                        }
+                        .tl {
+                            color: var(--pick-color);
+                            font-weight: bold;
+                        }
+                    }
+                    .column1 {
+                        text-align: center;
+                        .lesson_icon {
+                            margin: 0 0 20px;
+                        }
+                        .tl {
+                            font-size: 24px;
+                        }
+                    }
+                    .column2 {
+                        display: flex;
+                        justify-content: center;
+                        gap: 20px;
+                        .lesson_icon {
+                            width: 138px;
+                        }
+                        .tl_box {
+                            width: calc(100% - 158px);
+                            .tl {
+                                font-size: 45px;
+                                line-height: 110%;
+                                margin: 0 0 10px;
+                            }
+                            .txt {
+                                font-size: 16px;
+                                color: #ffffff;
+                            }
+                        }
+                    }
+                    .img_bt {
+                        margin: 0 0 20px;
+                        a {
+                            display: block;
+                            span {
+                                display: block;
+                            }
+                            .img {
+                            }
+                            .bt_txt {
+                                display: flex;
+                                justify-content: center;
+                                gap: 10px;
+                                align-items: center;
+                                padding: 20px 0 10px;
+                                .icon {
+                                    width: 24px;
+                                    height: 24px;
+                                }
+                            }
+                        }
+                    }
+                    .calendar {
+                        a {
+                            display: flex;
+                            justify-content: center;
+                            gap: 10px;
+                            align-items: center;
+                            color: #ffffff;
+                            font-size: 18px;
+                            position: relative;
+                            &::after {
+                                position: absolute;
+                                content: "";
+                                height: 1px;
+                                width: 190px;
+                                bottom: -4px;
+                                left: 0;
+                                right: 0;
+                                margin: 0 auto;
+                                background: #ffffff;
+                            }
+                            svg {
+                                width: 22px;
+                                height: 22px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .sec_img {
+            margin: 50px 0 0;
+        }
+    }
+    /******************
+    ベビークラス
+    ******************/
+    .baby {
+        .class_tl_box {
+            .icon {
+            }
+            h2 {
+                span {
+                }
+            }
+            .class_tl_txt {
+                color: var(--baby-color);
+            }
+        }
+        // クラスメインビジュアル
+        .class_mv {
+            .class_mv_img {
+                &::after {
+                    background-image: url(../../public/index/nami4.png);
+                }
+            }
+            .class_mv_tl {
+                background: var(--baby-color);
+                &::after {
+                    background: var(--baby-color);
+                }
+                h3 {
+                }
+                .class_mv_txt {
+                    .class_cons_txt {
+                        color: var(--baby-color);
+                    }
+                }
+            }
+        }
+
+        .class_concept_box_cont {
+            .class_concept_box_cont_lis {
+                background: #fae4ef;
+                .class_concept_box_cont_li {
+                    .tl {
+                        color: var(--baby-color);
+                    }
+                }
+            }
+        }
+        // 自立の土台
+        .independence {
+            margin: 50px 0 0;
+            h3 {
+                color: #ffffff;
+                padding: 20px 4vw;
+                background: url(../../public/index/tuti_bg.png);
+                font-size: 20px;
+                margin: 0;
+            }
+            .independence_flows {
+                .independence_flow {
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                    gap: 20px;
+                    z-index: 0;
+                    position: relative;
+                    margin: 0 0 60px;
+                    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+1,bce5d7+100 */
+                    background: #ffffff; /* Old browsers */
+                    background: -moz-linear-gradient(top, #ffffff 1%, #bce5d7 100%); /* FF3.6-15 */
+                    background: -webkit-linear-gradient(top, #ffffff 1%, #bce5d7 100%); /* Chrome10-25,Safari5.1-6 */
+                    background: linear-gradient(
+                        to bottom,
+                        #ffffff 1%,
+                        #bce5d7 100%
+                    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#bce5d7',GradientType=0 ); /* IE6-9 */
+                    &::before,&::after{
+                        position: absolute;
+                        content: "";
+                    }
+                    &::before{
+                        height: 32px;
+                        width: 27px;
+                        left: 0;
+                        right: 0;
+                        top: -27px;
+                        margin: 0 auto;
+                        background: url(../../public/index/arrow.png) no-repeat;
+                        background-position: center;
+                        z-index: 0;
+                    }
+                    &:first-child{
+                        &::before{
+                            display: none;
+                        }  
+                    }
+                    &::after {
+                        z-index: -1;
+                        left: 0;
+                        bottom: -60px;
+                        height: 60px;
+                        width: 100%;
+                        background: url(../../public/index/tuti_bg.png);
+                    }
+                    .img {
+                        padding: 20px 0 0;
+                        transform: translateY(10px);
+                    }
+                    .txt_box {
+                        padding: 0 0 10px;
+                        .txt {
+                            font-size: 18px;
+                            color: var(--txt-color);
+                        }
+                        .main {
+                            font-weight: bold;
+                            color: var(--baby-color);
+                            font-size: 38px;
+                            letter-spacing: 0.3em;
+                        }
+                    }
+                    &:nth-child(1),
+                    &:nth-child(4) {
+                        height: 190px;
+                    }
+                    &:last-child {
+                        .txt_box {
+                            padding: 0 0 30px;
+                            .txt {
+                                font-size: 26px;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        // コーチ
+        .coach {
+            background-color: #fae4ef;
+            padding: 30px 0 0;
+            h3 {
+                font-size: 30px;
+                color: var(--baby-color);
+                margin: 0 0 30px;
+                padding: 0 4%;
+            }
+            .coach_txt {
+                text-align: center;
+                font-size: 18px;
+                margin: 0 0 20px;
+                padding: 0 4%;
+            }
+        }
+    }
+    /******************
+    トドラークラス
+    ******************/
+    .toddler {
+        .class_tl_box {
+            .icon {
+            }
+            h2 {
+                span {
+                }
+            }
+            .class_tl_txt {
+                color: var(--toddler-color);
+            }
+        }
+        // クラスメインビジュアル
+        .class_mv {
+            .class_mv_img {
+                &::after {
+                    background-image: url(../../public/index/nami5.png);
+                }
+            }
+            .class_mv_tl {
+                background: var(--toddler-color);
+                &::after {
+                    background: var(--toddler-color);
+                }
+                h3 {
+                }
+                .class_mv_txt {
+                    .class_cons_txt {
+                        color: var(--toddler-color);
+                    }
+                }
+            }
+        }
+
+        .class_concept_box_cont {
+            .class_concept_box_cont_lis {
+                background: #ffe6d5;
+                .class_concept_box_cont_li {
+                    .tl {
+                        color: var(--toddler-color);
+                        span {
+                            border-bottom: 1px solid var(--toddler-color);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/*****************************************
+ sec3
+****************************************/
+.sec3{
+    padding: 120px 0 0;
+    .member_benefits_box{
+        padding: 0 20px 20px;
+        background: #FFFFCE;
+        border-radius: 10px;
+        h2{
+            margin: -40px 0 0;
+            img{
+                transform: translateY(-40px);
+            }
+        }
+        .member_benefits{
+            .member_benefit{
+                display: flex;
+                gap: 10px;
+                &:nth-child(n+2){
+                    margin: 20px 0 0;
+                }
+                .num{
+                    width: 40px;
+                    height: 40px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background: var(--main-color);
+                    color: var(--pick-color);
+                    font-size: 20px;
+                    border-radius: 50%;
+                    font-weight: bold;
+                }
+                .txt_box{
+                    width: calc(100% - 60px);
+                    .tl{
+                        font-weight: bold;
+                        font-size: 20px;
+                        color: var(--main-color);
+                    }
+                    .img{
+                        margin: 10px 0 0;
+                    }
+                }
+            }
+        }
+    }
+}
