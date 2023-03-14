@@ -238,7 +238,7 @@ const ContactForm = () => {
             </div>
             <div className={`${styles.form_privacy_check}`}>
                 <div className={`${styles.tl}`}>個人情報の取り扱いについて</div>
-                <div className={`txt ${styles.txt}`}><a href="https://www.hirabari.com/privacy-policy/" target="_blank" rel="noopener noreferrer">プライバシーポリシー<span className={`${styles.icon}`}><FontAwesomeIcon icon={faUpRightFromSquare} /></span></a>をご一読の上、ご同意頂ける場合は、「同意する」にチェックを入れ送信内容確認画面へお進みください。なお、ご入力いただいた個人情報は当スクールからの連絡やお問い合わせの回答に利用いたします。</div>
+                <div className={`txt ${styles.txt}`}><a href="https://www.hirabari.com/privacy-policy/" target="_blank" rel="noreferrer noopener">プライバシーポリシー<span className={`${styles.icon}`}><FontAwesomeIcon icon={faUpRightFromSquare} /></span></a>をご一読の上、ご同意頂ける場合は、「同意する」にチェックを入れ送信内容確認画面へお進みください。なお、ご入力いただいた個人情報は当スクールからの連絡やお問い合わせの回答に利用いたします。</div>
                 <div className={`${styles.input_box}`}>
                     <input type="checkbox" id='privacy_check' checked={isChecked} onChange={handleCheckboxChange} />
                     <label htmlFor="privacy_check">当社の個人情報取扱規約に同意する</label>
