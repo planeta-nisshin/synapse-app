@@ -15,7 +15,7 @@ import Image from 'next/image'
 import Sirokuma from '../public/class/sirokuma.svg'
 import ContactForm from '../components/ContactForm'
 
-type blogtype = { id?: number; title: { rendered: string }; content: { rendered: string }; acf: { baby_present: { url: string; alt: string }; baby_pay: number; baby_mom: string; baby_kids: string; baby_momkids: string; tod_present: { url: string; alt: string }; tod_pay: number; tod_mom: string; tod_kids: string; tod_momkids: string; }; classcat: number };
+type blogtype = { slug: string; id?: number; title: { rendered: string }; content: { rendered: string }; acf: { baby_present: { url: string; alt: string }; baby_pay: number; baby_mom: string; baby_kids: string; baby_momkids: string; tod_present: { url: string; alt: string }; tod_pay: number; tod_mom: string; tod_kids: string; tod_momkids: string; }; classcat: number };
 
 const Class = ({ classtl, babys, toddlers, calendars, opentxt, tellnum }: any) => {
   return (
@@ -41,7 +41,7 @@ const Class = ({ classtl, babys, toddlers, calendars, opentxt, tellnum }: any) =
           <div className="sec_in">
             <ul className={`${styles.class_lists}`}>
               {babys.map((bay: blogtype) => (
-                <li className={`${styles.class_list}`} key={bay.id}>
+                <li className={`${styles.class_list}`} id={bay.slug} key={bay.id}>
                   <div className={`${styles.tl_box}`}>
                     <div className={`${styles.icon}`}>
                       {bay.classcat == 6 ? <><BabyTaiso /></> : <></>}
@@ -120,7 +120,7 @@ const Class = ({ classtl, babys, toddlers, calendars, opentxt, tellnum }: any) =
           <div className="sec_in">
             <ul className={`${styles.class_lists}`}>
               {toddlers.map((tod: blogtype) => (
-                <li className={`${styles.class_list}`} key={tod.id}>
+                <li className={`${styles.class_list}`} id={tod.slug} key={tod.id}>
                   <div className={`${styles.tl_box}`}>
                     <div className={`${styles.icon}`}>
                       {tod.classcat == 6 ? <><ToddlerTaiso /></> : <></>}

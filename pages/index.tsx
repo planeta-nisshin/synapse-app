@@ -388,7 +388,7 @@ const Home: NextPage = ({ calendars, classtl, opentxt, tellnum }: any) => {
                       <div className={styles.tl}>どちらでも体験できます。</div>
                     </div>
                     <div className={`${styles.img_bt} bt`}>
-                      <Link href="">
+                      <Link href="/class#baby">
                         <span className={`${styles.img} vibration`}><Present1 viewBox="0 0 355 182" /></span>
                         <span className={styles.bt_txt}>体験レッスンのお申込みはこちら<span className={styles.icon}><FontAwesomeIcon icon={faCircleArrowRight} /></span></span>
                       </Link>
@@ -572,7 +572,7 @@ const Home: NextPage = ({ calendars, classtl, opentxt, tellnum }: any) => {
                       </div>
                     </div>
                     <div className={`${styles.img_bt} bt`}>
-                      <Link href="">
+                      <Link href="/class#toddlerclass-72">
                         <span className={`${styles.img} vibration`}><Present2 viewBox="0 0 355 135" /></span>
                         <span className={styles.bt_txt}>体験レッスンのお申込みはこちら<span className={styles.icon}><FontAwesomeIcon icon={faCircleArrowRight} /></span></span>
                       </Link>
@@ -588,7 +588,7 @@ const Home: NextPage = ({ calendars, classtl, opentxt, tellnum }: any) => {
                       </div>
                     </div>
                     <div className={`${styles.img_bt} bt`}>
-                      <Link href="">
+                      <Link href="/class#toddlerclass-74">
                         <span className={`${styles.img} vibration`}><Present3 viewBox="0 0 355 135" /></span>
                         <span className={styles.bt_txt}>体験レッスンのお申込みはこちら<span className={styles.icon}><FontAwesomeIcon icon={faCircleArrowRight} /></span></span>
                       </Link>
