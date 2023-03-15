@@ -51,7 +51,7 @@ const Class = ({ classtl, babys, toddlers, calendars, opentxt, tellnum }: any) =
                       <div className={`${styles.classname}`}>{classtl[0].tl}クラス</div>
                       <h4>{parse(bay.title.rendered)}</h4>
                       <div className={`${styles.price}`}>
-                        1回/{bay.acf.baby_pay.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} (税込)
+                        1回/{bay.acf.baby_pay.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} 円(税込)
                       </div>
                     </div>
                   </div>
@@ -97,7 +97,7 @@ const Class = ({ classtl, babys, toddlers, calendars, opentxt, tellnum }: any) =
                     <div className={`${styles.calendar_tl}`}>
                       <FontAwesomeIcon icon={faMagnifyingGlass} />体験希望日をお選びください
                     </div>
-                    {calendars[0].acf.calendar_img ? <div className={styles.calendar}><Image src={calendars[0].acf.calendar_img.url} alt="" width={400} height={280} /></div> : ""}
+                    {calendars[0].acf.calendar_img ? <div className={styles.calendar}> <a href={calendars[0].acf.calendar_img.url} target="_blank" rel="noopener noreferrer"><Image src={calendars[0].acf.calendar_img.url} alt="" width={400} height={280} /></a></div> : ""}
                   </div>
                   <div className={`bt ${styles.tel_bt}`}>
                     <a href={`tel:${tellnum}`}>
@@ -127,10 +127,10 @@ const Class = ({ classtl, babys, toddlers, calendars, opentxt, tellnum }: any) =
                       {tod.classcat == 7 ? <><ToddlerPool /></> : <></>}
                     </div>
                     <div className={`${styles.tl_txts}`}>
-                      <div className={`${styles.classname}`}>{classtl[0].tl}クラス</div>
+                      <div className={`${styles.classname}`}>{classtl[1].tl}クラス</div>
                       <h4>{parse(tod.title.rendered)}</h4>
                       <div className={`${styles.price}`}>
-                        1回/{tod.acf.tod_pay.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} (税込)
+                        1回/{tod.acf.tod_pay.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} 円(税込)
                       </div>
                     </div>
                   </div>
@@ -176,7 +176,7 @@ const Class = ({ classtl, babys, toddlers, calendars, opentxt, tellnum }: any) =
                     <div className={`${styles.calendar_tl}`}>
                       <FontAwesomeIcon icon={faMagnifyingGlass} />体験希望日をお選びください
                     </div>
-                    {calendars[0].acf.calendar_img ? <div className={styles.calendar}><Image src={calendars[0].acf.calendar_img.url} alt="" width={400} height={280} /></div> : ""}
+                    {calendars[0].acf.calendar_img ? <div className={styles.calendar}><a href={calendars[0].acf.calendar_img.url} target="_blank" rel="noopener noreferrer"><Image src={calendars[0].acf.calendar_img.url} alt="" width={400} height={280} /></a></div> : ""}
                   </div>
                   <div className={`bt ${styles.tel_bt}`}>
                     <a href={`tel:${tellnum}`}>

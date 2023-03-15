@@ -8,7 +8,7 @@ import Seedling from '../public/common/bottom_bt_icon3.svg'
 const btlist = [
     { num: 0, txt: "電話をかける", icond: <Mobilescreenbutton />, link: "tel:052-801-7170" },
     { num: 1, txt: "お問い合わせ", icond: <Envelope />, link: "/class#form" },
-    { num: 2, txt: "体験申込", icond: <Seedling />, link: "/class#form" },
+    { num: 2, txt: "体験申込", icond: <Seedling />, link: "/class" },
 ]
 
 const Bottom_bt = (props:any) => {

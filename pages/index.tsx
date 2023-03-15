@@ -107,7 +107,7 @@ const Home: NextPage = ({ calendars, classtl, opentxt, tellnum }: any) => {
                 乳幼児期は神経系の発達が著しい時期です
               </div>
               <div className={`${styles.img}`}>
-                <Graph viewBox="0 0 388 600"/>
+                <Graph viewBox="0 0 388 600" />
               </div>
               <p className={`${styles.sec_box1_txt} h_tl`}>
                 運動神経の良し悪しは<br />生まれつきではなく、<br />小さい頃の動きの経験によって<br />変わります。
@@ -136,7 +136,7 @@ const Home: NextPage = ({ calendars, classtl, opentxt, tellnum }: any) => {
           </div>
           <div className={`${styles.sec1_box3} ${styles.sec_box}`}>
             <h2>
-              <RironZiseki viewBox="0 0 428 284"/>
+              <RironZiseki viewBox="0 0 428 284" />
               <span className="visuallyHidden">40年以上の指導実績と最新の人間発達学の理論</span>
             </h2>
             <div className={`${styles.sec1_box3_txt} h_tl`}>
@@ -204,7 +204,7 @@ const Home: NextPage = ({ calendars, classtl, opentxt, tellnum }: any) => {
               <div className="sec_in">
                 <div className={styles.class_concept_img}>
                   <AnimationTrigger animation="fadeInup" rootMargin="0px" triggerOnce>
-                    <BabyConcept viewBox="0 0 362 340"/>
+                    <BabyConcept viewBox="0 0 362 340" />
                   </AnimationTrigger>
                 </div>
                 <div className={styles.class_concept_boxs}>
@@ -389,7 +389,7 @@ const Home: NextPage = ({ calendars, classtl, opentxt, tellnum }: any) => {
                     </div>
                     <div className={`${styles.img_bt} bt`}>
                       <Link href="/class#baby">
-                        <span className={`${styles.img} vibration`}><Present1 viewBox="0 0 355 182" /></span>
+                        <AnimationTrigger animation="vibration" rootMargin="0px" triggerOnce><span className={`${styles.img}`}><Present1 viewBox="0 0 355 182" /></span></AnimationTrigger>
                         <span className={styles.bt_txt}>体験レッスンのお申込みはこちら<span className={styles.icon}><FontAwesomeIcon icon={faCircleArrowRight} /></span></span>
                       </Link>
                     </div>
@@ -438,7 +438,7 @@ const Home: NextPage = ({ calendars, classtl, opentxt, tellnum }: any) => {
               <div className="sec_in">
                 <div className={styles.class_concept_img}>
                   <AnimationTrigger animation="fadeInup" rootMargin="0px" triggerOnce>
-                    <ToddlerConcept viewBox="0 0 362 346"/>
+                    <ToddlerConcept viewBox="0 0 362 346" />
                   </AnimationTrigger>
                 </div>
                 <div className={styles.class_concept_boxs}>
@@ -573,7 +573,7 @@ const Home: NextPage = ({ calendars, classtl, opentxt, tellnum }: any) => {
                     </div>
                     <div className={`${styles.img_bt} bt`}>
                       <Link href="/class#toddlerclass-72">
-                        <span className={`${styles.img} vibration`}><Present2 viewBox="0 0 355 135" /></span>
+                        <AnimationTrigger animation="vibration" rootMargin="0px" triggerOnce><span className={`${styles.img}`}><Present2 viewBox="0 0 355 135" /></span></AnimationTrigger>
                         <span className={styles.bt_txt}>体験レッスンのお申込みはこちら<span className={styles.icon}><FontAwesomeIcon icon={faCircleArrowRight} /></span></span>
                       </Link>
                     </div>
@@ -589,7 +589,7 @@ const Home: NextPage = ({ calendars, classtl, opentxt, tellnum }: any) => {
                     </div>
                     <div className={`${styles.img_bt} bt`}>
                       <Link href="/class#toddlerclass-74">
-                        <span className={`${styles.img} vibration`}><Present3 viewBox="0 0 355 135" /></span>
+                        <AnimationTrigger animation="vibration" rootMargin="0px" triggerOnce><span className={`${styles.img}`}><Present3 viewBox="0 0 355 135" /></span></AnimationTrigger>
                         <span className={styles.bt_txt}>体験レッスンのお申込みはこちら<span className={styles.icon}><FontAwesomeIcon icon={faCircleArrowRight} /></span></span>
                       </Link>
                     </div>
