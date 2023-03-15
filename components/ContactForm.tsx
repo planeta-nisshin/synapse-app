@@ -204,7 +204,7 @@ const ContactForm = () => {
                                 setAddress(e.target.value)
                             }}
                         />
-                        <span className={`${styles.musttext}`}>{formerror ? <>{!address ? <>住所を記入してください</> : <>{!formemail.match(/.+@.+\..+/) ? <>正しいフォーマットで入れてください</> : <></>}</>}</> : <></>}</span>
+                        <span className={`${styles.musttext}`}>{formerror ? <>{!address ? <>住所を記入してください</> : <></>}</> : <></>}</span>
                     </div>
                 </div>
                 <div className={`${styles.input_box}`}>
@@ -219,7 +219,7 @@ const ContactForm = () => {
                                 setFormtell(e.target.value)
                             }}
                         />
-                        <span className={`${styles.musttext}`}>{formerror ? <>{!formtell ? <>電話番号を記入してください</> : <>{!formemail.match(/.+@.+\..+/) ? <>正しいフォーマットで入れてください</> : <></>}</>}</> : <></>}</span>
+                        <span className={`${styles.musttext}`}>{formerror ? <>{!formtell ? <>電話番号を記入してください</> : <></>}</> : <></>}</span>
                     </div>
                 </div>
                 <div className={`${styles.input_box} ${styles.one_column}`}>
