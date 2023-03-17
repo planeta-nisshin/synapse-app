@@ -14,6 +14,7 @@ import parse from 'html-react-parser'
 import Image from 'next/image'
 import Sirokuma from '../public/class/sirokuma.svg'
 import Popup from '../public/class/popupicon.svg'
+import Popup2 from '../public/class/popupicon2.svg'
 import Popclose from '../public/class/popclose.svg'
 import ContactForm from '../components/ContactForm'
 
@@ -21,12 +22,25 @@ type blogtype = { slug: string; id?: number; title: { rendered: string }; conten
 
 const Class = ({ classtl, babys, toddlers, calendars, opentxt, tellnum }: any) => {
   const [popup, setPopup] = useState(false)
+  const [poptd, setPoptd] = useState(false)
   const [swipe, setSwipe] = useState(true)
+  console.log(poptd)
   const onPopup = () => {
     setPopup(true)
+    setTimeout(() => {
+      setSwipe(false)
+    }, 1500)
   }
   const onPopupclose = () => {
     setPopup(false)
+    setPoptd(false)
+  }
+  const onPopup2 = () => {
+    setPopup(true)
+    setPoptd(true)
+    setTimeout(() => {
+      setSwipe(false)
+    }, 1500)
   }
   const onSwipeclose = () => {
     setSwipe(false)
@@ -189,7 +203,7 @@ const Class = ({ classtl, babys, toddlers, calendars, opentxt, tellnum }: any) =
                     <div className={`${styles.calendar_tl}`}>
                       <FontAwesomeIcon icon={faMagnifyingGlass} />体験希望日をお選びください
                     </div>
-                    {calendars[0].acf.calendar_img ? <div className={styles.calendar} onClick={onPopup}><div className={styles.calendar_icon}><Popup /></div><Image src={calendars[0].acf.calendar_img.url} alt="" width={400} height={280} /></div> : ""}
+                    {calendars[0].acf.calendar_img ? <div className={styles.calendar} onClick={onPopup2}><div className={styles.calendar_icon}><Popup2 /></div><Image src={calendars[0].acf.calendar_img.url} alt="" width={400} height={280} /></div> : ""}
                   </div>
                   <div className={`bt ${styles.tel_bt}`}>
                     <a href={`tel:${tellnum}`}>
@@ -223,10 +237,10 @@ const Class = ({ classtl, babys, toddlers, calendars, opentxt, tellnum }: any) =
         </section>
       </main>
       {popup ? <div className={`${styles.popupmain}`}>
-        <div className={`${styles.in}`}>
+        <div className={`${styles.in} ${poptd ? `toddler`: ""}`}>
           <div className={`${styles.img_close}`} onClick={onPopupclose}><Popclose /></div>
           <div className={`${styles.img_scroll_wrap}`} onClick={onSwipeclose}>
-            {/* {swipe ? <div className={`${styles.swipe_icon_box}`} onClick={onSwipeclose}><div className={`${styles.swipe_icon}`} onClick={onSwipeclose}><Image src="/class/swipe.png" alt="" width={80} height={80} /></div></div> : ""} */}
+            <div className={`${styles.swipe_icon_box} ${swipe ? `` : `${styles.swipe_icon_box_close}`} sp`} onClick={onSwipeclose}><div className={`${styles.swipe_icon}`} onClick={onSwipeclose}><Image src="/class/swipe.png" alt="" width={80} height={80} /></div></div>
             <div className={`${styles.img_scroll}`}>
               <div className={`${styles.img}`}>
                 <Image className={`${styles.calendar_img}`} src={calendars[0].acf.calendar_img.url} alt="" width={640} height={453} />
