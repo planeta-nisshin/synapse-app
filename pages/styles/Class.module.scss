@@ -295,13 +295,35 @@
             display: table;
             margin: 0 0 20px auto;
         }
-        .img_scroll {
-            overflow-x: scroll;
-            .img {
-                width: 640px;
-                img {
-                    height: 453px!important;
-                    width: auto;
+        .img_scroll_wrap {
+            position: relative;
+            .swipe_icon_box {
+                pointer-events: none;
+                background: rgba(255,255,255,0.6);
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                left: 0;
+                top: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 1;
+                .swipe_icon {
+                    width: 80px;
+                    height: 80px;
+                    opacity: 0.6;
+                }
+            }
+            .img_scroll {
+                overflow-x: scroll;
+                .img {
+                    width: 640px;
+                    position: relative;
+                    img.calendar_img {
+                        height: 453px !important;
+                        width: auto;
+                    }
                 }
             }
         }

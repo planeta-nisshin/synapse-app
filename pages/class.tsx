@@ -21,12 +21,15 @@ type blogtype = { slug: string; id?: number; title: { rendered: string }; conten
 
 const Class = ({ classtl, babys, toddlers, calendars, opentxt, tellnum }: any) => {
   const [popup, setPopup] = useState(false)
-  console.log(popup)
+  const [swipe, setSwipe] = useState(true)
   const onPopup = () => {
     setPopup(true)
   }
   const onPopupclose = () => {
     setPopup(false)
+  }
+  const onSwipeclose = () => {
+    setSwipe(false)
   }
   return (
     <Layout>
@@ -222,9 +225,12 @@ const Class = ({ classtl, babys, toddlers, calendars, opentxt, tellnum }: any) =
       {popup ? <div className={`${styles.popupmain}`}>
         <div className={`${styles.in}`}>
           <div className={`${styles.img_close}`} onClick={onPopupclose}><Popclose /></div>
-          <div className={`${styles.img_scroll}`}>
-            <div className={`${styles.img}`}>
-              <Image src={calendars[0].acf.calendar_img.url} alt="" width={640} height={453} />
+          <div className={`${styles.img_scroll_wrap}`} onClick={onSwipeclose}>
+            {swipe ? <div className={`${styles.swipe_icon_box}`} onClick={onSwipeclose}><div className={`${styles.swipe_icon}`} onClick={onSwipeclose}><Image src="/class/swipe.png" alt="" width={80} height={80} /></div></div> : ""}
+            <div className={`${styles.img_scroll}`}>
+              <div className={`${styles.img}`}>
+                <Image className={`${styles.calendar_img}`} src={calendars[0].acf.calendar_img.url} alt="" width={640} height={453} />
+              </div>
             </div>
           </div>
         </div>
