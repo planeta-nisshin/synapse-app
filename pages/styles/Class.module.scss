@@ -112,6 +112,17 @@
             }
             .calendar {
                 box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+                position: relative;
+                .calendar_icon {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
             }
         }
         .tel_bt {
@@ -246,21 +257,62 @@
             margin: 0 auto 10px;
             color: var(--main-color);
         }
-        .tl{
+        .tl {
             color: var(--txt-color);
             font-size: 28px;
             margin: 0;
         }
-        .form_tyu{
+        .form_tyu {
             text-align: center;
             font-size: 16px;
             margin: 0 0 30px;
-            span{
+            span {
                 color: var(--baby-color);
             }
         }
-        .tl_txt{
-
+        .tl_txt {
         }
+    }
+}
+
+.popupmain {
+    z-index: 100;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .in {
+        background: var(--baby-color);
+        padding: 20px;
+        position: relative;
+        max-width: 680px;
+        width: 92%;
+        .img_close {
+            display: table;
+            margin: 0 0 20px auto;
+        }
+        .img_scroll {
+            overflow-x: scroll;
+            .img {
+                width: 640px;
+                img {
+                    height: 453px!important;
+                    width: auto;
+                }
+            }
+        }
+    }
+    .bg {
+        z-index: -1;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
     }
 }

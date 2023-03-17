@@ -5,6 +5,9 @@
     transition: 0.6s;
     width: 100%;
 }
+.fix_bt_move_default{
+    transform: translateY(100%)!important;
+}
 .fix_bt_wrap {
     display: flex;
     pointer-events: auto;

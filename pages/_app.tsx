@@ -1,9 +1,9 @@
 import './styles/globals.scss'
 import type { AppProps } from 'next/app'
 import { DefaultSeo } from 'next-seo'
-import { useCallback, useEffect, useState } from 'react';
-import Bottom_bt from '../components/Bottom_bt';
-import Sidbt from '../components/Sidbt';
+import { useCallback, useEffect, useState } from 'react'
+import Bottom_bt from '../components/Bottom_bt'
+import Sidbt from '../components/Sidbt'
 import ToddlerIcon from '../public/common/sid_icon_tod.svg'
 import BabyIcon from '../public/common/sid_icon_baby.svg'
 
@@ -26,18 +26,29 @@ function MyApp({ Component, pageProps }: AppProps) {
       icond: <ToddlerIcon />
     }
   ]
-  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
-
+  const [isHeaderVisible, setIsHeaderVisible] = useState(true)
+  const [isAtTop, setIsAtTop] = useState(true)
   useEffect(() => {
-    let prevScrollPos = window.scrollY || 0;
     const handleScroll = () => {
-      const currentScrollPos = window.scrollY || 0;
-      setIsHeaderVisible(prevScrollPos > currentScrollPos || currentScrollPos < 100);
-      prevScrollPos = currentScrollPos;
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  },);
+      const scrollPosition = window.scrollY
+      const isTop = scrollPosition === 0
+      setIsAtTop(isTop)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+  useEffect(() => {
+    let prevScrollPos = window.scrollY || 0
+    const handleScroll = () => {
+      const currentScrollPos = window.scrollY || 0
+      setIsHeaderVisible(prevScrollPos > currentScrollPos || currentScrollPos < 100)
+      prevScrollPos = currentScrollPos
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  },)
   return <>
     <DefaultSeo
       defaultTitle="デフォルトのタイトル"
@@ -70,7 +81,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Component {...pageProps} classtl={classtl} tellnum={tellnum} opentxt={opentxt}/>
       </div>
       <div className="com_bt_fix">
-        <Bottom_bt isHeaderVisible={isHeaderVisible} />
+        <Bottom_bt isHeaderVisible={isHeaderVisible} isAtTop={isAtTop}/>
         <Sidbt isHeaderVisible={isHeaderVisible} />
       </div>
       <div className="pc_right"></div>

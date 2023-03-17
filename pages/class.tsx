@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './styles/Class.module.scss'
 import Layout from '../components/Layout'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -13,11 +13,21 @@ import wpClient from '../lib/wpapi'
 import parse from 'html-react-parser'
 import Image from 'next/image'
 import Sirokuma from '../public/class/sirokuma.svg'
+import Popup from '../public/class/popupicon.svg'
+import Popclose from '../public/class/popclose.svg'
 import ContactForm from '../components/ContactForm'
 
 type blogtype = { slug: string; id?: number; title: { rendered: string }; content: { rendered: string }; acf: { baby_present: { url: string; alt: string }; baby_pay: number; baby_mom: string; baby_kids: string; baby_momkids: string; tod_present: { url: string; alt: string }; tod_pay: number; tod_mom: string; tod_kids: string; tod_momkids: string; }; classcat: number };
 
 const Class = ({ classtl, babys, toddlers, calendars, opentxt, tellnum }: any) => {
+  const [popup, setPopup] = useState(false)
+  console.log(popup)
+  const onPopup = () => {
+    setPopup(true)
+  }
+  const onPopupclose = () => {
+    setPopup(false)
+  }
   return (
     <Layout>
       <Head>
@@ -97,7 +107,7 @@ const Class = ({ classtl, babys, toddlers, calendars, opentxt, tellnum }: any) =
                     <div className={`${styles.calendar_tl}`}>
                       <FontAwesomeIcon icon={faMagnifyingGlass} />体験希望日をお選びください
                     </div>
-                    {calendars[0].acf.calendar_img ? <div className={styles.calendar}> <a href={calendars[0].acf.calendar_img.url} target="_blank" rel="noopener noreferrer"><Image src={calendars[0].acf.calendar_img.url} alt="" width={400} height={280} /></a></div> : ""}
+                    {calendars[0].acf.calendar_img ? <div className={styles.calendar} onClick={onPopup}><div className={styles.calendar_icon}><Popup /></div><Image src={calendars[0].acf.calendar_img.url} alt="" width={400} height={280} /></div> : ""}
                   </div>
                   <div className={`bt ${styles.tel_bt}`}>
                     <a href={`tel:${tellnum}`}>
@@ -176,7 +186,7 @@ const Class = ({ classtl, babys, toddlers, calendars, opentxt, tellnum }: any) =
                     <div className={`${styles.calendar_tl}`}>
                       <FontAwesomeIcon icon={faMagnifyingGlass} />体験希望日をお選びください
                     </div>
-                    {calendars[0].acf.calendar_img ? <div className={styles.calendar}><a href={calendars[0].acf.calendar_img.url} target="_blank" rel="noopener noreferrer"><Image src={calendars[0].acf.calendar_img.url} alt="" width={400} height={280} /></a></div> : ""}
+                    {calendars[0].acf.calendar_img ? <div className={styles.calendar} onClick={onPopup}><div className={styles.calendar_icon}><Popup /></div><Image src={calendars[0].acf.calendar_img.url} alt="" width={400} height={280} /></div> : ""}
                   </div>
                   <div className={`bt ${styles.tel_bt}`}>
                     <a href={`tel:${tellnum}`}>
@@ -209,6 +219,17 @@ const Class = ({ classtl, babys, toddlers, calendars, opentxt, tellnum }: any) =
           </div>
         </section>
       </main>
+      {popup ? <div className={`${styles.popupmain}`}>
+        <div className={`${styles.in}`}>
+          <div className={`${styles.img_close}`} onClick={onPopupclose}><Popclose /></div>
+          <div className={`${styles.img_scroll}`}>
+            <div className={`${styles.img}`}>
+              <Image src={calendars[0].acf.calendar_img.url} alt="" width={640} height={453} />
+            </div>
+          </div>
+        </div>
+        <div className={`${styles.bg}`} onClick={onPopupclose}></div>
+      </div> : <></>}
     </Layout>
   )
 }

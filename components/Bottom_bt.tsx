@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import styles from './styles/Bot_bt.module.scss'
 import Mobilescreenbutton from '../public/common/bottom_bt_icon1.svg'
@@ -11,9 +11,9 @@ const btlist = [
     { num: 2, txt: "体験申込", icond: <Seedling />, link: "/class" },
 ]
 
-const Bottom_bt = (props:any) => {
+const Bottom_bt = (props: any) => {
     return (
-        <div className={`${props.isHeaderVisible ? "" : "UpMove"} ${styles.fix_bt_move}`}>
+        <div className={`${props.isHeaderVisible ? "" : "UpMove"} ${styles.fix_bt_move} ${props.isAtTop ? `${styles.fix_bt_move_default}`: ""}`}>
             <ul className={`${styles.fix_bt_wrap}`}>
                 {btlist.map((bt) => (
                     <li key={bt.num} className={`${styles.fix_bt_li}`}>
