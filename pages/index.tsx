@@ -222,6 +222,7 @@ const Home: NextPage = ({ calendars, classtl, opentxt, tellnum }: any) => {
                           src="/index/baby_img1.jpg"
                           alt=""
                           fill
+                          quality={100}
                         />
                       </div>
                       <ul className={styles.class_concept_box_cont_lis}>
@@ -251,6 +252,7 @@ const Home: NextPage = ({ calendars, classtl, opentxt, tellnum }: any) => {
                           src="/index/baby_img2.jpg"
                           alt=""
                           fill
+                          quality={100}
                         />
                       </div>
                       <ul className={styles.class_concept_box_cont_lis}>
@@ -308,6 +310,7 @@ const Home: NextPage = ({ calendars, classtl, opentxt, tellnum }: any) => {
                           src="/index/baby_img3.jpg"
                           alt=""
                           fill
+                          quality={100}
                         />
                       </div>
                       <ul className={styles.class_concept_box_cont_lis}>
@@ -453,6 +456,7 @@ const Home: NextPage = ({ calendars, classtl, opentxt, tellnum }: any) => {
                           src="/index/toddler_img1.jpg"
                           alt=""
                           fill
+                          quality={100}
                         />
                       </div>
                       <ul className={styles.class_concept_box_cont_lis}>
@@ -494,6 +498,7 @@ const Home: NextPage = ({ calendars, classtl, opentxt, tellnum }: any) => {
                           src="/index/toddler_img2.jpg"
                           alt=""
                           fill
+                          quality={100}
                         />
                       </div>
                       <ul className={styles.class_concept_box_cont_lis}>
@@ -521,6 +526,7 @@ const Home: NextPage = ({ calendars, classtl, opentxt, tellnum }: any) => {
                           src="/index/toddler_img3.jpg"
                           alt=""
                           fill
+                          quality={100}
                         />
                       </div>
                       <ul className={styles.class_concept_box_cont_lis}>
