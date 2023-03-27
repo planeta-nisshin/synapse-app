@@ -217,12 +217,11 @@ const Home: NextPage = ({ calendars, classtl, opentxt, tellnum }: any) => {
                       <h4>脳の発達の素地をつくる</h4>
                     </div>
                     <div className={styles.class_concept_box_cont}>
-                      <div className={styles.img}>
+                      <div className={`${styles.img} ${styles.class_concept_box_img}`}>
                         <Image
                           src="/index/baby_img1.jpg"
                           alt=""
-                          width={388}
-                          height={202}
+                          fill
                         />
                       </div>
                       <ul className={styles.class_concept_box_cont_lis}>
@@ -247,12 +246,11 @@ const Home: NextPage = ({ calendars, classtl, opentxt, tellnum }: any) => {
                       <h4>丈夫な体の基礎をつくる</h4>
                     </div>
                     <div className={styles.class_concept_box_cont}>
-                      <div className={styles.img}>
+                      <div className={`${styles.img} ${styles.class_concept_box_img}`}>
                         <Image
                           src="/index/baby_img2.jpg"
                           alt=""
-                          width={388}
-                          height={202}
+                          fill
                         />
                       </div>
                       <ul className={styles.class_concept_box_cont_lis}>
@@ -305,12 +303,11 @@ const Home: NextPage = ({ calendars, classtl, opentxt, tellnum }: any) => {
                       <h4>愛着を育む</h4>
                     </div>
                     <div className={styles.class_concept_box_cont}>
-                      <div className={styles.img}>
+                      <div className={`${styles.img} ${styles.class_concept_box_img}`}>
                         <Image
                           src="/index/baby_img3.jpg"
                           alt=""
-                          width={388}
-                          height={202}
+                          fill
                         />
                       </div>
                       <ul className={styles.class_concept_box_cont_lis}>
@@ -451,12 +448,11 @@ const Home: NextPage = ({ calendars, classtl, opentxt, tellnum }: any) => {
                       <h4>体験から学ぶ<span>［認知能力］</span></h4>
                     </div>
                     <div className={styles.class_concept_box_cont}>
-                      <div className={styles.img}>
+                      <div className={`${styles.img} ${styles.class_concept_box_img250}`}>
                         <Image
                           src="/index/toddler_img1.jpg"
                           alt=""
-                          width={388}
-                          height={250}
+                          fill
                         />
                       </div>
                       <ul className={styles.class_concept_box_cont_lis}>
@@ -493,12 +489,11 @@ const Home: NextPage = ({ calendars, classtl, opentxt, tellnum }: any) => {
                       <h4>運動で、健康的な<br />生活習慣を身に付ける</h4>
                     </div>
                     <div className={styles.class_concept_box_cont}>
-                      <div className={styles.img}>
+                      <div className={`${styles.img} ${styles.class_concept_box_img}`}>
                         <Image
                           src="/index/toddler_img2.jpg"
                           alt=""
-                          width={388}
-                          height={202}
+                          fill
                         />
                       </div>
                       <ul className={styles.class_concept_box_cont_lis}>
@@ -521,12 +516,11 @@ const Home: NextPage = ({ calendars, classtl, opentxt, tellnum }: any) => {
                       <h4>社会性を育む<span>［非認知能力］</span></h4>
                     </div>
                     <div className={styles.class_concept_box_cont}>
-                      <div className={styles.img}>
+                      <div className={`${styles.img} ${styles.class_concept_box_img400}`}>
                         <Image
                           src="/index/toddler_img3.jpg"
                           alt=""
-                          width={388}
-                          height={400}
+                          fill
                         />
                       </div>
                       <ul className={styles.class_concept_box_cont_lis}>
