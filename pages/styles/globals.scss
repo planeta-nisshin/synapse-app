@@ -233,12 +233,10 @@ input[type="button"] {
     width: 428px;
   }
   .con_main_in {
-    // overflow-y: scroll;
     overflow-x: hidden;
   }
   .com_bt_fix {
     pointer-events: none;
-    // overflow: hidden;
     position: fixed;
     left: 0;
     right: 0;
