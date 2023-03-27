@@ -66,8 +66,8 @@ const Home: NextPage = ({ calendars, classtl, opentxt, tellnum }: any) => {
           <Image
             src="/index/mv.jpg"
             alt="今しかできない脳力アップ!プール&知育体操"
-            width={500}
-            height={500}
+            width={428}
+            height={597}
           />
         </section>
         <section className={`${styles.sec1} ${styles.sec}`}>
@@ -125,7 +125,7 @@ const Home: NextPage = ({ calendars, classtl, opentxt, tellnum }: any) => {
                 <Image
                   src="/index/kids_skill.jpg"
                   alt=""
-                  width={399}
+                  width={388}
                   height={430}
                 />
               </div>
@@ -221,8 +221,8 @@ const Home: NextPage = ({ calendars, classtl, opentxt, tellnum }: any) => {
                         <Image
                           src="/index/baby_img1.jpg"
                           alt=""
-                          width={399}
-                          height={289}
+                          width={388}
+                          height={202}
                         />
                       </div>
                       <ul className={styles.class_concept_box_cont_lis}>
@@ -251,8 +251,8 @@ const Home: NextPage = ({ calendars, classtl, opentxt, tellnum }: any) => {
                         <Image
                           src="/index/baby_img2.jpg"
                           alt=""
-                          width={399}
-                          height={289}
+                          width={388}
+                          height={202}
                         />
                       </div>
                       <ul className={styles.class_concept_box_cont_lis}>
@@ -309,8 +309,8 @@ const Home: NextPage = ({ calendars, classtl, opentxt, tellnum }: any) => {
                         <Image
                           src="/index/baby_img3.jpg"
                           alt=""
-                          width={399}
-                          height={289}
+                          width={388}
+                          height={202}
                         />
                       </div>
                       <ul className={styles.class_concept_box_cont_lis}>
@@ -455,8 +455,8 @@ const Home: NextPage = ({ calendars, classtl, opentxt, tellnum }: any) => {
                         <Image
                           src="/index/toddler_img1.jpg"
                           alt=""
-                          width={399}
-                          height={289}
+                          width={388}
+                          height={250}
                         />
                       </div>
                       <ul className={styles.class_concept_box_cont_lis}>
@@ -497,8 +497,8 @@ const Home: NextPage = ({ calendars, classtl, opentxt, tellnum }: any) => {
                         <Image
                           src="/index/toddler_img2.jpg"
                           alt=""
-                          width={399}
-                          height={289}
+                          width={388}
+                          height={202}
                         />
                       </div>
                       <ul className={styles.class_concept_box_cont_lis}>
@@ -525,8 +525,8 @@ const Home: NextPage = ({ calendars, classtl, opentxt, tellnum }: any) => {
                         <Image
                           src="/index/toddler_img3.jpg"
                           alt=""
-                          width={399}
-                          height={289}
+                          width={388}
+                          height={400}
                         />
                       </div>
                       <ul className={styles.class_concept_box_cont_lis}>
