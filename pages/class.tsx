@@ -24,7 +24,6 @@ const Class = ({ classtl, babys, toddlers, calendars, opentxt, tellnum }: any) =
   const [popup, setPopup] = useState(false)
   const [poptd, setPoptd] = useState(false)
   const [swipe, setSwipe] = useState(true)
-  console.log(poptd)
   const onPopup = () => {
     setPopup(true)
     setTimeout(() => {

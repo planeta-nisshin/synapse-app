@@ -27,10 +27,10 @@ body {
   border: 0 !important;
 }
 .baby {
-  background: var(--baby-color)!important;
+  background: var(--baby-color) !important;
 }
 .toddler {
-  background: var(--toddler-color)!important;
+  background: var(--toddler-color) !important;
 }
 .body_open {
   opacity: 1 !important;
@@ -145,23 +145,91 @@ input[type="button"] {
   display: block;
   width: 0;
   top: 0;
-  @media only screen and (min-width: 681px) {
+  @media only screen and (min-width: 500px) {
     width: calc(50% - 214px);
     height: 100vh;
   }
 }
 .pc_left {
   left: 0;
+  background-size: 83px 94px, 164px 167px, cover;
+  background-position: top 50px left 50px, bottom 0 right 10%, bottom;
+  background-repeat: no-repeat;
+  background-image: url(../../public/common/pc_left_bg_dec.png), url(../../public/common/pc_left_bg_dec2.png),
+    url(../../public/common/pc_left_bg.png);
+  .pc_nav_wrap {
+    width: 280px;
+    height: 100%;
+    left: 10%;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    position: absolute;
+    ul.pc_nav {
+      li.pc_nav_li {
+        padding: 0 0 20px;
+        &:nth-child(n+2){
+          padding: 20px 0;
+        }
+        border-bottom: 1px solid var(--main-color);
+        a {
+          display: table;
+          font-size: 18px;
+          position: relative;
+          color: var(--main-color);
+          padding: 0 0 0 25px;
+          &::after,&::before{
+            background: var(--main-color);
+            content: "";
+            position: absolute;
+          }
+          &::before{
+            left: 25px;
+            bottom: -4px;
+            width: 0;
+            height: 1px;
+            transition: 0.6s;
+          }
+          &::after {
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            left: 0;
+            top: 5px;
+          }
+          &:hover{
+            opacity: 0.6;
+            &::before{
+              width: calc(100% - 25px);
+            }
+          }
+        }
+      }
+    }
+  }
 }
 .pc_right {
+  overflow: hidden;
   right: 0;
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-image: url(../../public/common/pc_right_bg.png);
+  .pc_logo {
+    position: absolute;
+    right: 10%;
+    bottom: 30px;
+    width: 150px;
+  }
 }
 .con_main {
   position: relative;
   padding: 0 0 74px;
   width: 100%;
   margin: 0 auto;
-  @media only screen and (min-width: 681px) {
+  overflow: hidden;
+  @media only screen and (min-width: 500px) {
     width: 428px;
   }
   .con_main_in {
@@ -179,7 +247,7 @@ input[type="button"] {
     width: 100%;
     height: 100svh;
     z-index: 99;
-    @media only screen and (min-width: 681px) {
+    @media only screen and (min-width: 500px) {
       width: 429px;
     }
   }
@@ -233,7 +301,7 @@ input[type="button"] {
 /*****************************************
  共通太字
 ****************************************/
-.h_tl{
+.h_tl {
   font-size: 22px;
   font-weight: bold;
   text-align: center;

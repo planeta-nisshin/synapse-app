@@ -84,10 +84,12 @@ const ContactForm = () => {
         const res = await fetch('/api/send', {
             body: JSON.stringify({
                 name: formname,
+                kana: formkananame,
                 email: formemail,
                 zipcode: zipcode,
                 address: address,
                 message: formmessage,
+                tell: formtell,
                 subject: "お問い合わせいただきました"
             }),
             headers: {

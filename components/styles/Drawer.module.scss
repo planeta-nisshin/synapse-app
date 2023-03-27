@@ -1,0 +1,93 @@
+.drawer_btn {
+    pointer-events: auto;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: none;
+    background: none;
+    width: 35px;
+    height: 20px;
+    z-index: 101;
+    span {
+        display: block;
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background: var(--main-color);
+        left: 0;
+        &:nth-child(1) {
+            top: 0;
+        }
+        &:nth-child(2) {
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+        }
+        &:nth-child(3) {
+            bottom: 0;
+        }
+    }
+}
+.drawer_btn.action {
+    top: 30px;
+    span {
+        background: #ffffff;
+        &:nth-child(1) {
+            transform: rotate(45deg);
+        }
+        &:nth-child(2) {
+            display: none;
+        }
+        &:nth-child(3) {
+            transform: rotate(-45deg);
+            bottom: auto;
+            top: 0;
+        }
+    }
+}
+.drawer{
+    pointer-events: auto;
+    transition: 0.6s;
+    z-index: 100;
+    transform: translateX(100%);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: transparent linear-gradient(180deg, #A7F8FF 0%, #00B9EF 100%) 0% 0% no-repeat padding-box;
+    .nav_wrap{
+        display: flex;
+        align-items: center;
+        height: 100%;
+        .nav_box{
+            width: 100%;
+            overflow-y: scroll;
+            .img{
+                width: 120px;
+                margin: 0 0 20px 0;
+            }
+            .drawer_nav{
+                max-width: 280px;
+                .drawer_nav_li{
+                    border-bottom: 1px solid #ffffff;
+                    a{
+                        color: #ffffff;
+                        font-size: 18px;
+                        display: block;
+                        padding: 20px 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        svg{
+                            width: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.drawer.action{
+    transform: translateX(0)!important;
+}

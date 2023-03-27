@@ -6,6 +6,9 @@ import Bottom_bt from '../components/Bottom_bt'
 import Sidbt from '../components/Sidbt'
 import ToddlerIcon from '../public/common/sid_icon_tod.svg'
 import BabyIcon from '../public/common/sid_icon_baby.svg'
+import Logo from '../public/common/logo.svg'
+import Link from 'next/link'
+import Drawer from '../components/Drawer'
 
 function MyApp({ Component, pageProps }: AppProps) {
   const tellnum = "052-801-7170"
@@ -76,15 +79,27 @@ function MyApp({ Component, pageProps }: AppProps) {
       }}
     />
     <div className={`con_main ${isHeaderVisible ? "" : "UpMovemain"}`}>
-      <div className="pc_left"></div>
+      <div className="pc_left">
+        <div className="pc_nav_wrap pc">
+          <ul className="pc_nav">
+            <li className="pc_nav_li"><Link href="/">TOP</Link></li>
+            <li className="pc_nav_li"><Link href="/class#baby">ベビークラス</Link></li>
+            <li className="pc_nav_li"><Link href="/class#toddler">トドラークラス</Link></li>
+            <li className="pc_nav_li"><a href="https://www.hirabari.com/" target="_blank" rel="noopener noreferrer">平針スイミングスクールHP</a></li>
+          </ul>
+        </div>
+      </div>
       <div className="con_main_in" id='main_scroll'>
-        <Component {...pageProps} classtl={classtl} tellnum={tellnum} opentxt={opentxt}/>
+        <Component {...pageProps} classtl={classtl} tellnum={tellnum} opentxt={opentxt} />
       </div>
       <div className="com_bt_fix">
-        <Bottom_bt isHeaderVisible={isHeaderVisible} isAtTop={isAtTop}/>
+        <Bottom_bt isHeaderVisible={isHeaderVisible} isAtTop={isAtTop} />
         <Sidbt isHeaderVisible={isHeaderVisible} />
+        <Drawer />
       </div>
-      <div className="pc_right"></div>
+      <div className="pc_right">
+        <div className="pc_logo pc_tab"><Logo /></div>
+      </div>
     </div>
   </>
 }
