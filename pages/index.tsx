@@ -495,7 +495,7 @@ const Home: NextPage = ({ calendars, classtl, opentxt, tellnum }: any) => {
                     <div className={styles.class_concept_box_cont}>
                       <div className={styles.img}>
                         <Image
-                          src="/index/baby_img2.jpg"
+                          src="/index/toddler_img2.jpg"
                           alt=""
                           width={399}
                           height={289}
@@ -523,7 +523,7 @@ const Home: NextPage = ({ calendars, classtl, opentxt, tellnum }: any) => {
                     <div className={styles.class_concept_box_cont}>
                       <div className={styles.img}>
                         <Image
-                          src="/index/baby_img3.jpg"
+                          src="/index/toddler_img3.jpg"
                           alt=""
                           width={399}
                           height={289}
