@@ -238,6 +238,7 @@ input[type="button"] {
   .com_bt_fix {
     pointer-events: none;
     position: fixed;
+    overflow-x: hidden;
     left: 0;
     right: 0;
     margin: 0 auto;
