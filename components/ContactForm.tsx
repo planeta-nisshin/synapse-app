@@ -24,6 +24,7 @@ const ContactForm = () => {
         sub: ""
     })
     const [address, setAddress] = useState("")
+    const [isChecked, setIsChecked] = useState(false);
     const onErrorCheck = () => {
         if (!formname) {
             alert("名前を入れてください")
@@ -124,8 +125,6 @@ const ContactForm = () => {
             }
         }
     }
-    const [isChecked, setIsChecked] = useState(false);
-
     const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setIsChecked(event.target.checked);
     };

@@ -68,6 +68,7 @@ const Home: NextPage = ({ calendars, classtl, opentxt, tellnum }: any) => {
             alt="今しかできない脳力アップ!プール&知育体操"
             width={428}
             height={597}
+            quality={100}
           />
         </section>
         <section className={`${styles.sec1} ${styles.sec}`}>
