@@ -242,7 +242,7 @@ const Class = ({ classtl, babys, toddlers, calendars, opentxt, tellnum }: any) =
             <div className={`${styles.swipe_icon_box} ${swipe ? `` : `${styles.swipe_icon_box_close}`} sp`} onClick={onSwipeclose}><div className={`${styles.swipe_icon}`} onClick={onSwipeclose}><Image src="/class/swipe.png" alt="" width={80} height={80} /></div></div>
             <div className={`${styles.img_scroll}`}>
               <div className={`${styles.img}`}>
-                <Image className={`${styles.calendar_img}`} src={calendars[0].acf.calendar_img.url} alt="" width={640} height={453} />
+                <Image quality={100} className={`${styles.calendar_img}`} src={calendars[0].acf.calendar_img.url} alt="" width={calendars[0].acf.calendar_img.width} height={calendars[0].acf.calendar_img.height} />
               </div>
             </div>
           </div>

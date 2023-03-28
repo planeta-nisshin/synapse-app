@@ -46,7 +46,7 @@ const ContactForm = () => {
             alert("電話番号を入れてください")
         }
         if (!formmessage) {
-            alert("本文を入れてください")
+            alert("お問い合わせ内容を入れてください")
         }
         if (!isChecked) {
             alert("プライバシーポリシーに同意の上チェックしてください")
