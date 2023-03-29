@@ -38,6 +38,9 @@ const Class = ({ classtl, babys, toddlers, calendars, opentxt, tellnum }: any) =
     setPoptd(false)
   }
   const onPopup2 = () => {
+    if (!swipe) {
+      setSwipe(true)
+    }
     setPopup(true)
     setPoptd(true)
     setTimeout(() => {
