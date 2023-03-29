@@ -25,6 +25,9 @@ const Class = ({ classtl, babys, toddlers, calendars, opentxt, tellnum }: any) =
   const [poptd, setPoptd] = useState(false)
   const [swipe, setSwipe] = useState(true)
   const onPopup = () => {
+    if (!swipe) {
+      setSwipe(true)
+    }
     setPopup(true)
     setTimeout(() => {
       setSwipe(false)
@@ -236,7 +239,7 @@ const Class = ({ classtl, babys, toddlers, calendars, opentxt, tellnum }: any) =
         </section>
       </main>
       {popup ? <div className={`${styles.popupmain}`}>
-        <div className={`${styles.in} ${poptd ? `toddler`: ""}`}>
+        <div className={`${styles.in} ${poptd ? `toddler` : ""}`}>
           <div className={`${styles.img_close}`} onClick={onPopupclose}><Popclose /></div>
           <div className={`${styles.img_scroll_wrap}`} onClick={onSwipeclose}>
             <div className={`${styles.swipe_icon_box} ${swipe ? `` : `${styles.swipe_icon_box_close}`} sp`} onClick={onSwipeclose}><div className={`${styles.swipe_icon}`} onClick={onSwipeclose}><Image src="/class/swipe.png" alt="" width={80} height={80} /></div></div>
