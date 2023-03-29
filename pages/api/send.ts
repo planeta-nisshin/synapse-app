@@ -6,15 +6,15 @@ export default function handler(req: any, res: any) {
         sgMail.setApiKey(process.env.NEXT_PUBLIC_SENDGRID_APIKEY);
         const msg = {
             to: req.body.email,
-            bcc: 'hisano@planeta.co.jp',
-            from: 'hisano@planeta.co.jp',
+            bcc: process.env.NEXT_PUBLIC_MAIL_ADDRESS,
+            from: process.env.NEXT_PUBLIC_MAIL_ADDRESS,
             subject: '【平針スイミングスクール】お問合せありがとうございました。',
             text: `${req.body.name} 様\n\nこの度は、お問い合わせをいただき誠にありがとうございます。\n以下内容を受け付けました。\n-----------------------------\n\n【お名前】${req.body.name}\n\n【フリガナ】${req.body.kana}\n\n【メールアドレス】${req.body.email}\n\n【郵便番号】${req.body.zipcode}\n\n【住所】${req.body.address}\n\n【電話番号】${req.body.tell}\n\n【お問い合わせ内容】\n${req.body.message}\n\n-----------------------------\n\n-- \nこのメールは (https://www.synapps.jp/) のお問い合わせフォームから送信されました`
         };
         const msg2 = {
-            to: 'hisano@planeta.co.jp',
+            to: process.env.NEXT_PUBLIC_MAIL_ADDRESS,
             bcc: '',
-            from: 'hisano@planeta.co.jp',
+            from: process.env.NEXT_PUBLIC_MAIL_ADDRESS,
             subject: 'シナップスHPからお問合せがありました',
             text: `ホームページからお問い合わせが届きました。\n\n内容は以下になります。\n-----------------------------\n\n【お名前】${req.body.name}\n\n【フリガナ】${req.body.kana}\n\n【メールアドレス】${req.body.email}\n\n【郵便番号】${req.body.zipcode}\n\n【住所】${req.body.address}\n\n【電話番号】${req.body.tell}\n\n【お問い合わせ内容】\n${req.body.message}\n\n-----------------------------\n\n-- \nこのメールは (https://www.synapps.jp/) のお問い合わせフォームから送信されました`
         };
