@@ -101,6 +101,7 @@ const ContactForm = () => {
         if (res.ok) {
             alert("送信完了しました")
         }
+        if (res.ok) Router.push('/class')
     }
     const updateZipcodeSub = async (e: ChangeEvent<HTMLInputElement>) => {
         setZipcodeMain({ ...zipcode, sub: e.target.value })
