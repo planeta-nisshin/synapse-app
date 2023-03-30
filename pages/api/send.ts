@@ -3,7 +3,7 @@ import { MailDataRequired } from '@sendgrid/helpers/classes/mail'
 import { EmailData } from '@sendgrid/helpers/classes/email-address'
 import type { NextApiRequest, NextApiResponse } from 'next'
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     let response = null;
 
     if (req.method === 'POST') {
@@ -28,14 +28,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
             },
         ]
         console.log('req.body: ', req.body);
-        (async () => {
-            try {
-                await sgMail.send(messages);
-                res.status(200).json(messages);
-            } catch (err) {
-                console.error(err);
-                res.status(500).json(err);
-            }
-        })();
+        try {
+            await sgMail.send(messages);
+            res.status(200).json(messages);
+        } catch (err) {
+            console.error(err);
+            res.status(500).json(err);
+        }
     }
 }
