@@ -17,6 +17,9 @@ const nextConfig = {
     disableStaticImages: true,
     domains: ['synapse.jidainokaze.com'],
   },
+  env: {
+    SENDGRID_API_KEY: process.env.NEXT_PUBLIC_SENDGRID_APIKEY
+  }
 }
 // const withBundleAnalyzer = require('@next/bundle-analyzer')({
 //   enabled: process.env.ANALYZE === 'true',
