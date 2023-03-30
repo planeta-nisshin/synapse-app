@@ -34,7 +34,7 @@ import { faCalendarDays, faCircleArrowRight } from "@fortawesome/free-solid-svg-
 import AnimationTrigger from '../components/AnimationTrigger'
 
 
-const Home: NextPage = ({ calendars, classtl, opentxt, tellnum }: any) => {
+const Home: NextPage = ({ calendars, classtl }: any) => {
   const indep = [
     {
       img: <AityakuFlow1 />,
