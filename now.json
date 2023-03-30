@@ -1,7 +1,0 @@
-{
-    "build": {
-        "env": {
-            "NEXT_PUBLIC_SENDGRID_APIKEY": "@sendgrid_api_key"
-        }
-    }
-}
