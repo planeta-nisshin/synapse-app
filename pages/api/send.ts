@@ -17,7 +17,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
                     email: process.env.NEXT_PUBLIC_MAIL_ADDRESS,
                 } as EmailData,
                 subject: '【シナップス | 平針スイミングスクール】お問合せありがとうございました。',
-                text: `${req.body.name} 様\n\nこの度は、お問い合わせをいただき誠にありがとうございます。\n以下内容を受け付けました。\n-----------------------------\n\n【お名前】${req.body.name}\n\n【フリガナ】${req.body.kana}\n\n【メールアドレス】${req.body.email}\n\n【郵便番号】${req.body.zipcode.sub ? req.body.zipcode.sub : ""}\n\n【住所】${req.body.address}\n\n【電話番号】${req.body.tell}\n\n【お問い合わせ内容】\n${req.body.message}\n\n-----------------------------\n\n-- \nこのメールは (https://www.synapps.jp/) のお問い合わせフォームから送信されました`
+                text: `${req.body.name} 様\n\nこの度は、シナップスにお問い合わせをいただき誠にありがとうございます。\n以下内容を受け付けました。\n-----------------------------\n\n【お名前】${req.body.name}\n\n【フリガナ】${req.body.kana}\n\n【メールアドレス】${req.body.email}\n\n【郵便番号】${req.body.zipcode.sub ? req.body.zipcode.sub : ""}\n\n【住所】${req.body.address}\n\n【電話番号】${req.body.tell}\n\n【お問い合わせ内容】\n${req.body.message}\n\n-----------------------------\n\n-- \nこのメールは (https://www.synapps.jp/) のお問い合わせフォームから送信されました`
             },
             {
                 to: process.env.NEXT_PUBLIC_MAIL_SEND_ADDRESS,
