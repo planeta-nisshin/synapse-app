@@ -54,28 +54,14 @@ function MyApp({ Component, pageProps }: AppProps) {
   },)
   return <>
     <DefaultSeo
-      defaultTitle="デフォルトのタイトル"
-      description="デフォルトの説明"
+      defaultTitle="名古屋市天白区｜知育体育スクール「シナップス」｜平針スイミングスクール運営"
+      description="シナップスは、神経系の発達が著しい6ヶ月の赤ちゃんから3歳までの乳幼児対象の知育体育スクール。最新の心理学と運動発達学に基づき、プールと知育体操で40年以上の指導実績のある平針スイミングスクールが運営しています。"
       openGraph={{
         type: "website",
-        title: "デフォルトのタイトル",
-        description: "デフォルトの説明",
-        site_name: "サイトの名前",
-        url: "サイトのURL",
-        images: [
-          {
-            url: "https://www.example.ie/og-image-01.jpg",
-            width: 800,
-            height: 600,
-            alt: 'Og Image Alt',
-            type: 'image/jpeg',
-          },
-        ],
-      }}
-      twitter={{
-        handle: '@handle',
-        site: '@site',
-        cardType: "summary_large_image",
+        title: "名古屋市天白区｜知育体育スクール「シナップス」｜平針スイミングスクール運営",
+        description: "シナップスは、神経系の発達が著しい6ヶ月の赤ちゃんから3歳までの乳幼児対象の知育体育スクール。最新の心理学と運動発達学に基づき、プールと知育体操で40年以上の指導実績のある平針スイミングスクールが運営しています。",
+        site_name: "シナップス",
+        url: "https://www.synapps.jp/",
       }}
     />
     <div className={`con_main ${isHeaderVisible ? "" : "UpMovemain"}`}>
