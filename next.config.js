@@ -15,7 +15,7 @@ const nextConfig = {
   },
   images: {
     disableStaticImages: true,
-    domains: ['synapse.jidainokaze.com'],
+    domains: [process.env.NEXT_PUBLIC_WORDPRESS_API_URL],
   },
   env: {
     SENDGRID_API_KEY: process.env.NEXT_PUBLIC_SENDGRID_APIKEY

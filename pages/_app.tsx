@@ -1,7 +1,7 @@
 import './styles/globals.scss'
 import type { AppProps } from 'next/app'
 import { DefaultSeo } from 'next-seo'
-import { useCallback, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import Bottom_bt from '../components/Bottom_bt'
 import Sidbt from '../components/Sidbt'
 import ToddlerIcon from '../public/common/sid_icon_tod.svg'

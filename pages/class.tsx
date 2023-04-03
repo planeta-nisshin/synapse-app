@@ -260,16 +260,14 @@ const Class = ({ classtl, babys, toddlers, calendars, opentxt, tellnum }: any) =
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const comp = await wpClient.url(`${process.env.NEXT_PUBLIC_WORDPRESS_API_URL}/wp-json/wp/v2/comp`).perPage(1)
-  const calendar = await wpClient.url(`${process.env.NEXT_PUBLIC_WORDPRESS_API_URL}/wp-json/wp/v2/calendar`).perPage(1)
-  const baby = await wpClient.url(`${process.env.NEXT_PUBLIC_WORDPRESS_API_URL}/wp-json/wp/v2/babyclass?_embed&orderby=modified&order=desc&per_page=100`)
-  const toddler = await wpClient.url(`${process.env.NEXT_PUBLIC_WORDPRESS_API_URL}/wp-json/wp/v2/toddlerclass?_embed&orderby=modified&order=desc&per_page=100`)
+  const calendar = await wpClient.url(`https://${process.env.NEXT_PUBLIC_WORDPRESS_API_URL}/wp-json/wp/v2/calendar`).perPage(1)
+  const baby = await wpClient.url(`https://${process.env.NEXT_PUBLIC_WORDPRESS_API_URL}/wp-json/wp/v2/babyclass?_embed&orderby=modified&order=desc&per_page=100`)
+  const toddler = await wpClient.url(`https://${process.env.NEXT_PUBLIC_WORDPRESS_API_URL}/wp-json/wp/v2/toddlerclass?_embed&orderby=modified&order=desc&per_page=100`)
   return {
     props: {
       calendars: calendar,
       toddlers: toddler,
       babys: baby,
-      comps: comp
     }
   }
 }

@@ -695,7 +695,7 @@ const Home: NextPage = ({ calendars, classtl }: any) => {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const calendar = await wpClient.url(`${process.env.NEXT_PUBLIC_WORDPRESS_API_URL}/wp-json/wp/v2/calendar`).perPage(1)
+  const calendar = await wpClient.url(`https://${process.env.NEXT_PUBLIC_WORDPRESS_API_URL}/wp-json/wp/v2/calendar`).perPage(1)
   return {
     props: {
       calendars: calendar,
