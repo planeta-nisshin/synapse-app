@@ -473,7 +473,7 @@ const Home: NextPage = ({ calendars, classtl }: any) => {
                             </li>
                             <li>
                               <div className={`${styles.tl}`}>身体を移動する動き</div>
-                              <div className={`txt ${styles.txt}`}>立つ・座る・転がる・渡る・ぶら下がるなど</div>
+                              <div className={`txt ${styles.txt}`}>歩く・走る・跳ぶ昇・よける・這う・滑るなど</div>
                             </li>
                             <li>
                               <div className={`${styles.tl}`}>用具などを操作する動き</div>
