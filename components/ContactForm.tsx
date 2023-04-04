@@ -82,26 +82,29 @@ const ContactForm = () => {
     }
     const sendForm = async (event: React.FormEvent<HTMLInputElement>) => {
         event.preventDefault()
-        const res = await fetch('/api/send', {
-            body: JSON.stringify({
-                name: formname,
-                kana: formkananame,
-                email: formemail,
-                zipcode: zipcode,
-                address: address,
-                message: formmessage,
-                tell: formtell,
-                subject: "お問い合わせいただきました"
-            }),
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            method: 'POST'
-        })
-        if (res.ok) {
+        try {
+            const res = await fetch('/api/send', {
+                body: JSON.stringify({
+                    name: formname,
+                    kana: formkananame,
+                    email: formemail,
+                    zipcode: zipcode,
+                    address: address,
+                    message: formmessage,
+                    tell: formtell,
+                    subject: "お問い合わせいただきました"
+                }),
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                method: 'POST'
+            })
             alert("送信完了しました")
+            if (res.ok) Router.reload()
+        } catch (error) {
+            console.error('Fetch error : ', error);
+            alert(JSON.stringify(error));
         }
-        if (res.ok) Router.reload()
     }
     const updateZipcodeSub = async (e: ChangeEvent<HTMLInputElement>) => {
         setZipcodeMain({ ...zipcode, sub: e.target.value })
