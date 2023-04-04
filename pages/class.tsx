@@ -18,7 +18,7 @@ import Popup2 from '../public/class/popupicon2.svg'
 import Popclose from '../public/class/popclose.svg'
 import ContactForm from '../components/ContactForm'
 
-type blogtype = { slug: string; id?: number; title: { rendered: string }; content: { rendered: string }; acf: { baby_present: { url: string; alt: string }; baby_pay: number; baby_mom: string; baby_kids: string; baby_momkids: string; tod_present: { url: string; alt: string }; tod_pay: number; tod_mom: string; tod_kids: string; tod_momkids: string; }; classcat: number };
+type blogtype = { slug: string; id?: number; title: { rendered: string }; content: { rendered: string }; acf: { baby_present: { url: string; alt: string }; baby_pay: number; baby_mom: string; baby_kids: string; baby_momkids: string; tod_present: { url: string; alt: string }; tod_pay: number; tod_mom: string; tod_kids: string; tod_momkids: string; count: number; }; classcat: number };
 
 const Class = ({ classtl, babys, toddlers, calendars, opentxt, tellnum }: any) => {
   const [popup, setPopup] = useState(false)
@@ -83,7 +83,7 @@ const Class = ({ classtl, babys, toddlers, calendars, opentxt, tellnum }: any) =
                       <div className={`${styles.classname}`}>{classtl[0].tl}クラス</div>
                       <h4>{parse(bay.title.rendered)}</h4>
                       <div className={`${styles.price}`}>
-                        1回/{bay.acf.baby_pay.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} 円(税込)
+                        {bay.acf.count}回/{bay.acf.baby_pay.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} 円(税込)
                       </div>
                     </div>
                   </div>
@@ -162,7 +162,7 @@ const Class = ({ classtl, babys, toddlers, calendars, opentxt, tellnum }: any) =
                       <div className={`${styles.classname}`}>{classtl[1].tl}クラス</div>
                       <h4>{parse(tod.title.rendered)}</h4>
                       <div className={`${styles.price}`}>
-                        1回/{tod.acf.tod_pay.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} 円(税込)
+                        {tod.acf.count}回/{tod.acf.tod_pay.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} 円(税込)
                       </div>
                     </div>
                   </div>
