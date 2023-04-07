@@ -58,8 +58,6 @@ const Home: NextPage = ({ calendars, classtl }: any) => {
     <Layout>
       <Head>
         <title>名古屋市天白区｜知育体育スクール「シナップス」｜平針スイミングスクール運営</title>
-        <meta name="description" content="シナップスは、神経系の発達が著しい6ヶ月の赤ちゃんから3歳までの乳幼児対象の知育体育スクール。最新の心理学と運動発達学に基づき、プールと知育体操で40年以上の指導実績のある平針スイミングスクールが運営しています。" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
         <section className={styles.mv}>
