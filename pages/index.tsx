@@ -118,7 +118,7 @@ const Home: NextPage = ({ calendars, classtl }: any) => {
           </div>
           <div className={`${styles.sec1_box2} ${styles.sec_box}`}>
             <div className="sec_in">
-              <h2>幼児期からの運動発達に欠かせない<span className={styles.ribbon}>コオディネーション能力</span></h2>
+              <h2>幼児期からの運動発達に欠かせない<span className={styles.ribbon}>コオーディネーション能力</span></h2>
               <div className={`txt ${styles.txt}`}>コオーディネーション能力は<span className={styles.blue}>７つの能力</span>で構成されています。</div>
               <div className={styles.img}>
                 <Image
